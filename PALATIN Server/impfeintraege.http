@@ -1,0 +1,19 @@
+GET http://localhost:3000/impfeintraege
+################################################################
+POST http://localhost:3000/impfeintraege
+Content-Type: application/json
+
+{
+  "chargennummer": "aaaaaaaa",
+  "patienteninfo": "aaaaaaaa",
+  "impfstoffzulassungsnummer": "aaaaaaaa"
+}
+################################################################
+PATCH http://localhost:3000/impfeintraege/1
+Content-Type: application/json
+
+{
+  "patienteninfo": "bbbbbbbb"
+}
+################################################################
+DELETE http://localhost:3000/impfeintraege/1

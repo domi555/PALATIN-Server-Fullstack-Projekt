@@ -1,0 +1,13 @@
+GET http://localhost:3000/impfstoffe
+################################################################
+POST http://localhost:3000/impfstoffe
+Content-Type: application/json
+
+{
+  "impfstoffname": "aaaaaaaa",
+  "zulassungsnummer": "aaaaaaaa",
+  "hersteller": "aaaaaaaa",
+  "einsatzzweck": "aaaaaaaa"
+}
+################################################################
+DELETE http://localhost:3000/impfstoffe/aaaaaaaa
