@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const path = require('path');
+const cors = require('cors');
 
 // Routes
 const impfstoffe = require('./routes/impfstoffe');
@@ -15,6 +16,7 @@ require('dotenv').config();
 const app = express();
 
 app.use(morgan('dev'));
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(helmet());
