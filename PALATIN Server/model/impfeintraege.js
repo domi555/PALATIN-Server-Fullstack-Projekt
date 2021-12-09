@@ -2,7 +2,7 @@ const db = require('../db');
 
 const getImpfeintraege = async () => {
   const { rows } = await db.query(
-    'SELECT id, impfstoffname, zulassungsnummer, hersteller, einsatzzweck, chargennummer, impfdatum, patienteninfo from impfeintraege JOIN impfstoffe ON impfeintraege.impfstoff_zulassungsnummer = impfstoffe.zulassungsnummer',
+    'SELECT id, impfstoffname, zulassungsnummer as impfstoffzulassungsnummer, hersteller, einsatzzweck, chargennummer, impfdatum, patienteninfo from impfeintraege JOIN impfstoffe ON impfeintraege.impfstoff_zulassungsnummer = impfstoffe.zulassungsnummer',
   );
   return rows;
 };
